@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+  --color-blue: #83afac;
+  --color-green: #c8c8a9;
+  --color-brown: #774f38;
+  --color-beige: #ece5ce;
+  --color-yellow: #f9f5ad;
+  --color-pink: #ea7c91;
+  --color-button:#6b86855e;
+  --color-button-hover: #5a71705e;
+  --color-button-active: #83afac9b;
+
+  --poppins: 'Poppins', sans-serif;
+  --baloo: 'Baloo 2', cursive;
+  --bitter: 'Bitter', serif;
+
+}
+
+body {
+  background: var(--color-blue);
+  background: radial-gradient(circle, var(--color-yellow) 0%, var(--color-blue));
+}
+
+html {
+  font-family: var(--baloo);
+}
