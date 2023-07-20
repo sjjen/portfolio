@@ -1,38 +1,27 @@
 'use client'
 import styles from '../styles/index.module.css'
 import Heading from '@/components/heading'
-import Start from '@/components/start'
 import { useState } from 'react'
+import { useRouter } from 'next/router';
 
 export default function Home() {
-
-  const [rendered, setRendered] = useState('heading');
   const [showButton, setShowButton] = useState(true);
-  
-  //either render the header component or start the game
-  const renderedComponent = () => {
-    if (rendered === 'heading') {
-      return <Heading />;
-    } else if (rendered === 'start') {
-      return <Start />;
-    } else {
-      return null;
-    }
-  }
+  const router = useRouter(); // Initialize the useRouter hook
 
-  //change the state to begin the game once button is clicked & remove button
+
+  // Change the state to begin the game once the button is clicked & remove the button
   const handleClick = () => {
-    setRendered('start');
-    setShowButton(!showButton);
+    setShowButton(false);
+    // Navigate to the desired page when the button is clicked
+    router.push('/explore'); // Replace '/another-page' with the path of the page you want to navigate to
   }
 
   return (
     <main className={styles.main}>
-      {renderedComponent()}
+      <Heading />
       <div className={styles.buttonContainer}>
-        {showButton && <button onClick={() => handleClick()} className={styles.button}>Let's Go!</button>}
+        {showButton && <button onClick={handleClick}>Let's Go!</button>}
       </div>
     </main>
   )
 }
-

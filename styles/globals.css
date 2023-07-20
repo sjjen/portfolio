@@ -14,14 +14,79 @@
   --poppins: 'Poppins', sans-serif;
   --baloo: 'Baloo 2', cursive;
   --bitter: 'Bitter', serif;
-
 }
 
 body {
-  background: var(--color-blue);
   background: radial-gradient(circle, var(--color-yellow) 0%, var(--color-blue));
 }
 
 html {
   font-family: var(--baloo);
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 15px;
+  color: var(--color-brown);
+}
+
+button {
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  color: white;
+  background-color: var(--color-button);
+  font-family: var(--baloo);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+button:focus {
+  background-color: var(--color-button-active);
+}
+
+/* animations */
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    line-height: 30px;
+    transform: translatey(0px);
+  }
+
+  55% {
+    transform: translatey(-20px);
+  }
+
+  60% {
+    line-height: 10px;
+  }
+
+  100% {
+    line-height: 30px;
+    transform: translatey(0px);
+  }
 }

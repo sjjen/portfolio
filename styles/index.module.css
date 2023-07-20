@@ -7,23 +7,3 @@
   justify-content: center;
   align-self: center;
 }
-
-.button {
-  padding: 0.125rem 0.5rem;
-  color: white;
-  background-color: var(--color-button);
-  font-family: var(--baloo);
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.8px);
-  -webkit-backdrop-filter: blur(7.8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.button:hover {
-  background-color: var(--color-button-hover);
-}

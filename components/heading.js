@@ -1,12 +1,12 @@
 import Image from "next/image";
-import styles from "../styles/Heading.module.css";
+import styles from "../styles/heading.module.css";
 
 export default function Heading() {
   return (
     <div className={styles.gifContainer}>
       <Image
         src="/homeright.gif"
-        alt="gif for landing page"
+        alt="mini me gif"
         width={400}
         height={400}
         priority
@@ -15,8 +15,7 @@ export default function Heading() {
         Hey there, I'm Jen. <br />
         Welcome to my interactive portfolio! <br />
         <br />
-        You can navigate the site by either clicking the sections you'd like to view or use the '↑ ↓ → ←' keys to move me around!<br />
-        <br />
+        Click the button below to get started<br /><br />
         Enjoy your visit!
       </p>
     </div>
