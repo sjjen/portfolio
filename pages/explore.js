@@ -4,7 +4,8 @@ import { useState } from "react";
 import Setting from "@/components/setting";
 
 export default function Explore() {
-  const [imageSrc, setImageSrc] = useState('/homeright.gif');
+  const [imageSrcR, setImageSrcR] = useState('/homeright.gif');
+  const [imageSrcL, setImageSrcL] = useState('/homeleft.gif');
   const [bkgImage, setBkgImage] = useState('/park.png')
   const [showSetting, setShowSetting] = useState(false);
 
@@ -12,17 +13,20 @@ export default function Explore() {
   //NEED 2 CHANGE BKG IMAGES!!!!!! FOR THE OTHERS
   //we're passing these props down to our Setting component
   const handleParkClick = () => {
-    setImageSrc('/parkright.gif');
+    setImageSrcR('/parkright.gif');
+    setImageSrcL('/parkleft.gif');
     setBkgImage('/park.png');
   }
 
   const handleBeachClick = () => {
-    setImageSrc('/beachright.gif');
+    setImageSrcR('/beachright.gif');
+    setImageSrcL('/beachleft.gif');
     setBkgImage('/park.png');
   }
 
   const handleHomeClick = () => {
-    setImageSrc('/homeright.gif');
+    setImageSrcR('/homeright.gif');
+    setImageSrcL('/homeleft.gif');
     setBkgImage('/park.png');
   }
 
@@ -37,7 +41,7 @@ export default function Explore() {
         <div className={styles.container}>
           <div className={styles.gifContainer}>
             <Image
-              src={imageSrc}
+              src={imageSrcR}
               alt="mini me gif"
               width={400}
               height={400}
@@ -60,7 +64,7 @@ export default function Explore() {
         </div>
       )}
       {showSetting && (
-        <Setting imageSrc={imageSrc} bkgImage={bkgImage}/>
+        <Setting imageSrcR={imageSrcR} imageSrcL={imageSrcL} bkgImage={bkgImage}/>
       )}
     </>
   );
