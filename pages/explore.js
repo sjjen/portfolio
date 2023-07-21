@@ -6,7 +6,6 @@ import Setting from "@/components/setting";
 export default function Explore() {
   const [imageSrcR, setImageSrcR] = useState('/homeright.gif');
   const [imageSrcL, setImageSrcL] = useState('/homeleft.gif');
-  const [bkgImage, setBkgImage] = useState('/park.png')
   const [showSetting, setShowSetting] = useState(false);
 
   // depending on choice, the image src changes
@@ -15,19 +14,16 @@ export default function Explore() {
   const handleParkClick = () => {
     setImageSrcR('/parkright.gif');
     setImageSrcL('/parkleft.gif');
-    setBkgImage('/park.png');
   }
 
   const handleBeachClick = () => {
     setImageSrcR('/beachright.gif');
     setImageSrcL('/beachleft.gif');
-    setBkgImage('/park.png');
   }
 
   const handleHomeClick = () => {
     setImageSrcR('/homeright.gif');
     setImageSrcL('/homeleft.gif');
-    setBkgImage('/park.png');
   }
 
   // to continue exploring, clicking the image
@@ -47,6 +43,7 @@ export default function Explore() {
               height={400}
               priority
               onClick={handleSelectClick}
+              className={styles.selectGif}
             />
             <p className={styles.blurb}>
               Wait! <br />
@@ -64,7 +61,7 @@ export default function Explore() {
         </div>
       )}
       {showSetting && (
-        <Setting imageSrcR={imageSrcR} imageSrcL={imageSrcL} bkgImage={bkgImage}/>
+        <Setting imageSrcR={imageSrcR} imageSrcL={imageSrcL}/>
       )}
     </>
   );

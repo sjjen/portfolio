@@ -3,45 +3,53 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/setting.module.css';
 
 export default function Setting(props) {
-
   const imageSrcR = props.imageSrcR;
   const imageSrcL = props.imageSrcL;
-  const bkgImage = props.bkgImage;
 
-  const [position, setPosition] = useState({ x: 45, y: 30 });
-  const [imageSrc, setImageSrc] = useState(imageSrcR);
+  const [position, setPosition] = useState({ x: 70, y: 70 });
+  const [imageSrc, setImageSrc] = useState(imageSrcL);
 
-  //move the gif around on keyup event
+  const distance = 4; // Distance to move the GIF on each arrow key press
+
+  // Move the gif around on keyup event
   useEffect(() => {
     const handleKeyPress = (e) => {
       const { keyCode } = e;
-      const distance = 2;
 
       let updatedPosition = { ...position };
+
+      const gifWidth = 25; // Set the width of the gif container in percentage
+      const gifHeight = 25; // Set the height of the gif container in percentage
+
+      // Calculate the boundaries based on screen size
+      const maxX = 100 - gifWidth;
+      const maxY = 100 - gifHeight;
+      const minX = 0;
+      const minY = 0;
 
       if (keyCode === 37) {
         // Left arrow key
         updatedPosition.x = Math.max(
           updatedPosition.x - distance,
-          0, // Limit the leftmost position to 0
+          minX
         );
       } else if (keyCode === 39) {
         // Right arrow key
         updatedPosition.x = Math.min(
           updatedPosition.x + distance,
-          100, // Limit the rightmost position based on the screen width
+          maxX
         );
       } else if (keyCode === 38) {
         // Up arrow key
         updatedPosition.y = Math.max(
           updatedPosition.y - distance,
-          0, // Limit the topmost position to 0
+          minY
         );
       } else if (keyCode === 40) {
         // Down arrow key
         updatedPosition.y = Math.min(
           updatedPosition.y + distance,
-          100, // Limit the bottommost position based on the screen height
+          maxY
         );
       }
 
@@ -56,7 +64,7 @@ export default function Setting(props) {
     };
   }, [position]);
 
-  //change L vs R gif on keydown event going left/right
+  // Change L vs R gif on keydown event going left/right
   useEffect(() => {
     const handleKeyDown = (e) => {
       const { keyCode } = e;
@@ -83,18 +91,16 @@ export default function Setting(props) {
   }, [imageSrcL, imageSrcR]);
 
   return (
-    // 1 div) for background image
-    <div
-      className={`${styles.background} ${styles.gradientBorder}`}
-      style={{ backgroundImage: `url(${bkgImage})` }}
-    >
-      {/* 2 div) container for  the gif to keep the size responsive*/}
+    <div className={styles.background}>
+      {/* div container for the gif to keep the size responsive */}
       <div
         className={styles.responsiveGif}
         style={{
           position: "relative",
-          left: `${position.x}%`,
-          top: `${position.y}%`,
+          left: `${position.x}%`, // Use percentage-based units for positioning
+          top: `${position.y}%`, // Use percentage-based units for positioning
+          width: "25%", // Set the width of the container
+          height: "25%", // Set the height of the container
         }}
       >
         <Image

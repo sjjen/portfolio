@@ -7,7 +7,7 @@
   --color-beige: #ece5ce;
   --color-yellow: #f9f5ad;
   --color-pink: #ea7c91;
-  --color-button:#6b86855e;
+  --color-button: #6b86855e;
   --color-button-hover: #5a71705e;
   --color-button-active: #83afac9b;
 
@@ -16,8 +16,10 @@
   --bitter: 'Bitter', serif;
 }
 
+
 body {
-  background: radial-gradient(circle, var(--color-yellow) 0%, var(--color-blue));
+  /* Replace the radial-gradient with appropriate color stops */
+  background: radial-gradient(circle, var(--color-yellow) 0%, var(--color-blue) 100%);
 }
 
 html {
@@ -49,44 +51,9 @@ button {
 
 button:hover {
   background-color: var(--color-button-hover);
+  cursor: pointer;
 }
 
 button:focus {
   background-color: var(--color-button-active);
-}
-
-/* animations */
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-
-  50% {
-    transform: translatey(-20px);
-  }
-
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-@keyframes float2 {
-  0% {
-    line-height: 30px;
-    transform: translatey(0px);
-  }
-
-  55% {
-    transform: translatey(-20px);
-  }
-
-  60% {
-    line-height: 10px;
-  }
-
-  100% {
-    line-height: 30px;
-    transform: translatey(0px);
-  }
 }
