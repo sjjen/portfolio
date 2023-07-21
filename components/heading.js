@@ -11,7 +11,7 @@ export default function Heading() {
         height={400}
         priority
       />
-      <p className={styles.blurb}>
+      <p class='blurb'>
         Hey there, I'm Jen. <br />
         Welcome to my interactive portfolio! <br />
         <br />

@@ -91,28 +91,37 @@ export default function Setting(props) {
   }, [imageSrcL, imageSrcR]);
 
   return (
-    <div className={styles.background}>
-      {/* div container for the gif to keep the size responsive */}
-      <div
-        className={styles.responsiveGif}
-        style={{
-          position: "relative",
-          left: `${position.x}%`, // Use percentage-based units for positioning
-          top: `${position.y}%`, // Use percentage-based units for positioning
-          width: "25%", // Set the width of the container
-          height: "25%", // Set the height of the container
-        }}
-      >
-        <Image
-          src={imageSrc}
-          alt="mini me gif"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center center"
-          priority
-        />
+    <>
+      {/* div boundary for the gif to stay within the screen */}
+      <div className={styles.gifBoundary}>
+        {/* div container for the gif to keep the size responsive */}
+        <div
+          className={styles.responsiveGif}
+          style={{
+            position: "relative",
+            left: `${position.x}%`, // Use percentage-based units for positioning
+            top: `${position.y}%`, // Use percentage-based units for positioning
+            width: "25%", // Set the width of the container
+            height: "25%", // Set the height of the container
+          }}
+        >
+          <Image
+            src={imageSrc}
+            alt="mini me gif"
+            layout="fill"
+            objectFit="contain"
+            objectPosition="center center"
+            priority
+          />
+        </div>
       </div>
-      <h1>HEY!!</h1>
-    </div>
+      {/* the interactive components for the gif */}
+      <div className={styles.buttons}>
+        {/* Buttons with updated positions */}
+        <button className="sectionButton">ABOUT</button>
+        <button className="sectionButton">EXPERIENCE<br />+ PROJECTS</button>
+        <button className="sectionButton">RESUME</button>
+      </div>
+    </>
   );
 }

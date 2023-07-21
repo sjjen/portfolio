@@ -18,7 +18,7 @@ export default function Explore() {
 
   const handleBeachClick = () => {
     setImageSrcR('/beachright.gif');
-    setImageSrcL('/beachleft.gif');
+    setImageSrcL('/beachleft.GIF');
   }
 
   const handleHomeClick = () => {
@@ -45,7 +45,7 @@ export default function Explore() {
               onClick={handleSelectClick}
               className={styles.selectGif}
             />
-            <p className={styles.blurb}>
+            <p class='blurb'>
               Wait! <br />
               Before we go explore further, <br />
               These are some of my favorite activities! <br />

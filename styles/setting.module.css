@@ -1,4 +1,4 @@
-.background {
+.gifBoundary {
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -17,6 +17,14 @@
   object-position: center center;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 @media (min-width: 1000px){
   .responsiveGif {
