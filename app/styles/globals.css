@@ -15,7 +15,6 @@
 
 
 body {
-  /* Replace the radial-gradient with appropriate color stops */
   background: radial-gradient(circle, var(--color-yellow) 0%, var(--color-blue) 100%);
 }
 

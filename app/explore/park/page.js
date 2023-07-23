@@ -1,6 +1,11 @@
+import Menu from "@/app/components/menu";
+
 export default function Park() {
   
   return (
-    <div>PARK</div>
+    <div>
+      <Menu />
+      PARK
+    </div>
   );
 }

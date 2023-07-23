@@ -1,7 +1,12 @@
+import Menu from "@/app/components/menu";
+
 export default function Beach() {
   
     return (
-      <div>Beach</div>
+      <div>
+        <Menu />
+        Beach
+      </div>
     );
   }
   

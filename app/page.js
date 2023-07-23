@@ -1,7 +1,8 @@
 'use client'
 import styles from './styles/index.module.css'
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'
+import Menu from './components/menu';
 
 export default function Homepage() {
 
@@ -20,7 +21,7 @@ export default function Homepage() {
 
   return (
     <main className={styles.main}>
-
+      <Menu />
       <section className={styles.gifContainer}>
         <Image
           src="/homeright.gif"

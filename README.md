@@ -2,3 +2,10 @@
 
 Hope you enjoy! :)
 
+## Stack
+
+-Next.js
+-React
+-Javascript
+-Html
+-CSS

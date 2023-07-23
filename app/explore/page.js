@@ -3,8 +3,9 @@ import Image from "next/image";
 import styles from "../styles/explore.module.css";
 import { useState } from "react";
 import Setting from "@/app/components/setting";
-import { useRouter } from "next/router";
-
+import { useRouter } from 'next/navigation'
+import Menu from "../components/menu";
+ 
 /*
 
 -----!! INSTEAD OF PROP DRILLING TO SINGLE PAGE, 
@@ -66,7 +67,7 @@ export default function Explore() {
     <>
       {!showSetting && (
         <main className={styles.container}>
-
+          <Menu />
           <section className={styles.gifContainer}>
             <Image
               src={imageSrcR}
