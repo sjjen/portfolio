@@ -4,7 +4,6 @@ import styles from "../styles/explore.module.css";
 import { useState } from "react";
 import Setting from "@/app/components/setting";
 import { useRouter } from 'next/navigation'
-import Menu from "../components/menu";
  
 /*
 
@@ -67,7 +66,6 @@ export default function Explore() {
     <>
       {!showSetting && (
         <main className={styles.container}>
-          <Menu />
           <section className={styles.gifContainer}>
             <Image
               src={imageSrcR}

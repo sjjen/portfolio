@@ -1,6 +1,5 @@
 import styles from '../styles/work.module.css'
 import Project from '../components/project.js'
-import Menu from '../components/menu';
 
 export default function Work() {
   const testObj = {
@@ -11,7 +10,6 @@ export default function Work() {
 
   return (
     <main>
-      <Menu />
       <Project testObj={testObj}/>
       <Project testObj={testObj}/>
       <header>Work</header>

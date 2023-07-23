@@ -1,11 +1,12 @@
+'use client'
 import styles from '../styles/about.module.css'
 import Image from 'next/image';
-import Menu from '../components/menu';
+import { useRouter } from 'next/navigation';
 
 export default function About() {
+  const router = useRouter();
   return (
     <main>
-      <Menu />
       <header>Hey there! I'm Jen Lee.</header>
       <figure>
         <Image
@@ -38,18 +39,17 @@ export default function About() {
         from painting to knitting to woodworking and beyond—the list is endless!
         <br />
         <br />
-        Thanks for visiting! Hope you enjoyed your stay.
-        <br />
+
+        If you'd like to learn a bit more about my professional experience, you can view my resume <a onClick={() => router.push('/about/resume')}>here</a>.
+        <br /><br />
         You can connect with me via:
-        <ul>
-          <a href="https://www.linkedin.com/in/jenleesj/" target="_blank">
-            <li>LinkedIn</li>
-          </a>
-          <a href="https://github.com/sjjen" target="_blank">
-            <li>Github</li>
-          </a>
-        </ul>
-        (sorry I'm not an avid user of social media).
+        <br />
+        
+          <a href="https://www.linkedin.com/in/jenleesj/" target="_blank">LinkedIn</a><br />
+          <a href="https://github.com/sjjen" target="_blank">Github</a><br /><br />
+        
+        (Sorry, I'm not really an avid user of social media T ^ T)<br />
+        Thanks for visiting! Hope you enjoyed your stay.
         <br />
         <br />
         {" "}

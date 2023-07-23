@@ -1,10 +1,8 @@
 import styles from '../styles/contact.module.css'
-import Menu from '../components/menu';
 
 export default function Contact() {
   return (
     <main>
-      <Menu />
       <header>Contact</header>
       <form>
         <label for='name'>Name:</label><br />

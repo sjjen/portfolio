@@ -8,7 +8,7 @@ export default function Menu() {
     <nav>Menu
       <ul>
         <li onClick={() => router.push('/')}>HOME</li>
-        <li onClick={() => router.push('/explore')}>EXPLORE</li>
+        {/* <li onClick={() => router.push('/explore')}>EXPLORE</li> */}
         <li onClick={() => router.push('/about')}>ABOUT</li>
         <li onClick={() => router.push('/work')}>WORK</li>
         <li onClick={() => router.push('/contact')}>CONTACT</li>
