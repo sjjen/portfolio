@@ -55,21 +55,6 @@ button:focus {
   background-color: var(--color-button-active);
 }
 
-.sectionButton {
-  background-image: url(/park.png);
-  padding: 0.125rem 0.5rem;
-  font-family: var(--baloo);
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-align: center;
-  color: var(--color-blue);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.8px);
-  -webkit-backdrop-filter: blur(7.8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
 .blurb {
   transform: translatey(0px);
   animation: float 3s ease-in-out infinite;

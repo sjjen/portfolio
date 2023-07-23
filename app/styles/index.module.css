@@ -1,0 +1,18 @@
+.main {
+  display: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.gifContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem;
+}

@@ -1,0 +1,95 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(/park.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gifBoundary {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.responsiveGif {
+  position: relative;
+  width: 25%;
+  height: 25%;
+  z-index: 1;
+}
+
+.sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sectionItem {
+  flex: 0 0 calc(33.33% - 2rem);
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Add media queries for responsiveness */
+
+/* For smaller screens, display 2 items side by side */
+@media (max-width: 768px) {
+  .sections {
+    justify-content: flex-start;
+  }
+  
+  .sectionItem {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+/* For even smaller screens, display 1 item per row */
+@media (max-width: 480px) {
+  .sectionItem {
+    flex: 0 0 calc(100% - 2rem);
+  }
+}
+
+
+
+@media (min-width: 1000px){
+  .responsiveGif {
+    width: 27%;
+    height: 27%;
+  }
+}
+
+@media (min-width: 1100px){
+  .responsiveGif {
+    width: 28%;
+    height: 28%;
+  }
+}
+
+@media (min-width: 1200px){
+  .responsiveGif {
+    width: 29%;
+    height: 29%;
+  }
+}
+
+@media (min-width: 1300px){
+  .responsiveGif {
+    width: 30%;
+    height: 30%;
+  }
+}

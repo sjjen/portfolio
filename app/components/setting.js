@@ -5,6 +5,9 @@ import styles from '../styles/setting.module.css';
 export default function Setting(props) {
   const imageSrcR = props.imageSrcR;
   const imageSrcL = props.imageSrcL;
+  const about = props.prop1;
+  const projects = props.prop2;
+  const resume = props.prop3;
 
   const [position, setPosition] = useState({ x: 70, y: 70 });
   const [imageSrc, setImageSrc] = useState(imageSrcL);
@@ -29,28 +32,16 @@ export default function Setting(props) {
 
       if (keyCode === 37) {
         // Left arrow key
-        updatedPosition.x = Math.max(
-          updatedPosition.x - distance,
-          minX
-        );
+        updatedPosition.x = Math.max(updatedPosition.x - distance, minX);
       } else if (keyCode === 39) {
         // Right arrow key
-        updatedPosition.x = Math.min(
-          updatedPosition.x + distance,
-          maxX
-        );
+        updatedPosition.x = Math.min(updatedPosition.x + distance, maxX);
       } else if (keyCode === 38) {
         // Up arrow key
-        updatedPosition.y = Math.max(
-          updatedPosition.y - distance,
-          minY
-        );
+        updatedPosition.y = Math.max(updatedPosition.y - distance, minY);
       } else if (keyCode === 40) {
         // Down arrow key
-        updatedPosition.y = Math.min(
-          updatedPosition.y + distance,
-          maxY
-        );
+        updatedPosition.y = Math.min(updatedPosition.y + distance, maxY);
       }
 
       setPosition(updatedPosition);
@@ -91,7 +82,7 @@ export default function Setting(props) {
   }, [imageSrcL, imageSrcR]);
 
   return (
-    <>
+    <div className={styles.container}>
       {/* div boundary for the gif to stay within the screen */}
       <div className={styles.gifBoundary}>
         {/* div container for the gif to keep the size responsive */}
@@ -115,13 +106,90 @@ export default function Setting(props) {
           />
         </div>
       </div>
-      {/* the interactive components for the gif */}
-      <div className={styles.buttons}>
-        {/* Buttons with updated positions */}
-        <button className="sectionButton">ABOUT</button>
-        <button className="sectionButton">EXPERIENCE<br />+ PROJECTS</button>
-        <button className="sectionButton">RESUME</button>
+
+
+      {/* Background images with Next.js Image component */}
+      <div className={styles.sections}>
+        <div className={styles.sectionItem}>
+          <div
+            style={{
+              position: "relative",
+              width: "25%",
+              height: "25%",
+            }}
+          >
+            <Image
+              src={about}
+              alt="About Me"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="center center"
+              priority
+            />
+          </div>
+        </div>
+        <div className={styles.sectionItem}>
+          <div
+            style={{
+              position: "relative",
+              width: "25%",
+              height: "25%",
+            }}
+          >
+            <Image
+              src={projects}
+              alt="Projects + Experience"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="center center"
+              priority
+            />
+          </div>
+        </div>
+        <div className={styles.sectionItem}>
+          <div
+            style={{
+              position: "relative",
+              width: "25%",
+              height: "25%",
+            }}
+          >
+            <Image
+              src={resume}
+              alt="Resume"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="center center"
+              priority
+            />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
-}
+}          
+
+{/* <Image 
+src={about} 
+alt="About Me" 
+layout="fill"
+objectFit="contain"
+objectPosition="center center"
+priority 
+/>
+<Image
+src={projects}
+alt="Projects + Experience"
+layout="fill"
+objectFit="contain"
+objectPosition="center center"
+priority
+/>
+<Image
+  src={resume}
+  alt="Resume"
+  layout="fill"
+  objectFit="contain"
+  objectPosition="center center"
+  priority
+/>; */}
