@@ -1,0 +1,28 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  padding: 5rem;
+  margin: 2rem;
+  background-color: var(--color-button);
+  border-radius: 16px;
+}
+
+.form input {
+  width: 13rem;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+.form textarea {
+  border: none;
+  width: 13.8rem;
+  justify-content: center;
+  border-radius: 5px;
+}

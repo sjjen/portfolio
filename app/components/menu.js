@@ -1,17 +1,39 @@
 'use client'
-import styles from '../styles/menu.module.css'
-import { useRouter } from 'next/navigation';
+import styles from '../styles/menu.module.css';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Menu() {
-  const router = useRouter();
+  const [showMenu, setShowMenu] = useState(false);
+
+  const menuSections = [
+    { path: '/', label: 'HOME' },
+    // { path: '/explore', label: 'EXPLORE' },
+    { path: '/about', label: 'ABOUT' },
+    { path: '/work', label: 'WORK' },
+    { path: '/contact', label: 'CONTACT' },
+  ];
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <nav>Menu
-      <ul>
-        <li onClick={() => router.push('/')}>HOME</li>
-        {/* <li onClick={() => router.push('/explore')}>EXPLORE</li> */}
-        <li onClick={() => router.push('/about')}>ABOUT</li>
-        <li onClick={() => router.push('/work')}>WORK</li>
-        <li onClick={() => router.push('/contact')}>CONTACT</li>
+    <nav className={styles.menuContainer}>
+      <div className={`${styles.menuIcon} ${showMenu ? styles.open : ''}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+        {/* <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span> */}
+      </div>
+      <ul className={`${styles.menuItems} ${showMenu ? styles.show : ''}`}>
+        {menuSections.map((section) => (
+          <li key={section.path}>
+            <Link href={section.path}>{section.label}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

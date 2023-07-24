@@ -2,9 +2,9 @@ import styles from '../styles/contact.module.css'
 
 export default function Contact() {
   return (
-    <main>
-      <header>Contact</header>
-      <form>
+    <main className={styles.contactContainer}>
+      <header>Send me a message!</header>
+      <form className={styles.form}>
         <label for='name'>Name:</label><br />
         <input type='text' name='name' value='First Last'/><br />
         

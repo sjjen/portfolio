@@ -1,0 +1,17 @@
+.work {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
