@@ -1,7 +1,7 @@
 import styles from '../styles/project.module.css'
 import Image from 'next/image';
 
-export default function Project(props) {
+export default function ProjectDetail(props) {
 
   const title = props.projects.title;
   const description = props.projects.description;

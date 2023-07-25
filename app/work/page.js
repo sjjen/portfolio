@@ -1,7 +1,12 @@
+'use client'
 import styles from '../styles/work.module.css'
 import Project from '../components/project.js'
+import ProjectDetail from '../components/projectDetail';
+import { useState } from 'react';
 
 export default function Work() {
+  const [showDetail, setShowDetail] = useState('false');
+
   const projects = [
     {
       title: "TITLE 1",
@@ -19,6 +24,10 @@ export default function Work() {
       imageSrc: "/homeleft.gif",
     },
   ];
+
+  const toggleProjectDetail = () => {
+    setShowDetail(!showDetail);
+  }
 
   return (
     <main className={styles.main}>
