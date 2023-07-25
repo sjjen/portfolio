@@ -32,16 +32,17 @@ export default function Homepage() {
           Hey there, I&apos;m Jen. <br />
           Welcome to my portfolio! <br />
           <br />
-          Click the button below to get started
+          {/* !!!!!------------uncomment later also the button below!!-------!!! */}
+          {/* Click the button below to get started
           <br />
-          <br />
+          <br /> */}
           Enjoy your visit!
         </p>
       </section>
       
-      <div className={styles.buttonContainer}>
+      {/* <div className={styles.buttonContainer}>
         <button onClick={handleClick}>Let&apos;s Go!</button>
-      </div>
+      </div> */}
     </main>
   );
 }
