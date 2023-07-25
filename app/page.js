@@ -29,7 +29,7 @@ export default function Homepage() {
           priority
         />
         <p class="blurb">
-          Hey there, I'm Jen. <br />
+          Hey there, I&apos;m Jen. <br />
           Welcome to my portfolio! <br />
           <br />
           Click the button below to get started
@@ -40,7 +40,7 @@ export default function Homepage() {
       </section>
       
       <div className={styles.buttonContainer}>
-        <button onClick={handleClick}>Let's Go!</button>
+        <button onClick={handleClick}>Let&apos;s Go!</button>
       </div>
     </main>
   );

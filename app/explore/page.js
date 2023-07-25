@@ -86,7 +86,7 @@ export default function Explore() {
           </section>
 
           <nav className={styles.buttons}>
-            <button onClick={handleHomeClick}>Chillin' at Home</button>
+            <button onClick={handleHomeClick}>Chillin&apos; at Home</button>
             <button onClick={handleBeachClick}>Hanging out at the Beach</button>
             <button onClick={handleParkClick}>Picnic at the Park</button>
           </nav>
