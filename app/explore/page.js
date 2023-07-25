@@ -42,7 +42,7 @@ export default function Explore() {
   }
 
   const handleBeachClick = () => {
-    setImageSrcR('/beachrt.gif');
+    setImageSrcR('/beachright.gif');
     setImageSrcL('/beachleft.gif');
     setProp1('/parkWalk.png');
     setProp2('/parkPicnic.png');

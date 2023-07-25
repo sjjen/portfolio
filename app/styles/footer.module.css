@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
   padding-top: 2rem;
   margin-top: 8rem;
+  border-radius: 16px;
 }
