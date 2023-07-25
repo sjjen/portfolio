@@ -11,7 +11,7 @@ export default function Menu() {
     // { path: '/explore', label: 'EXPLORE' },
     { path: '/about', label: 'ABOUT' },
     { path: '/work', label: 'WORK' },
-    { path: '/contact', label: 'CONTACT' },
+    // { path: '/contact', label: 'CONTACT' },
   ];
 
   const toggleMenu = () => {
@@ -24,9 +24,6 @@ export default function Menu() {
         <span></span>
         <span></span>
         <span></span>
-        {/* <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span> */}
       </div>
       <ul className={`${styles.menuItems} ${showMenu ? styles.show : ''}`}>
         {menuSections.map((section) => (

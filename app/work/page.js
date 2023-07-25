@@ -11,7 +11,7 @@ export default function Work() {
     {
       title: "TITLE 1",
       description: "blahablababfljf",
-      imageSrc: "/beachleft.GIF",
+      imageSrc: "/beachleft.gif",
     },
     {
       title: "TITLE 2",
