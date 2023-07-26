@@ -11,8 +11,8 @@
 }
 
 .header figure {
-  width: 22rem;
-  height: 22rem;
+  width: 17rem;
+  height: 17rem;
   background-image: url(/aboutme.jpg);
   background-size: cover;
   background-position: center;
@@ -25,6 +25,7 @@
   font-size: 3rem;
   font-family: var(--bitter);
   text-transform: none;
+  text-align: left;
 }
 
 .section {
@@ -39,9 +40,20 @@
   text-align: center;
 }
 
+
+
+@media (min-width: 450px) {
+  .header figure {
+  width: 22rem;
+  height: 22rem;
+  }
+}
 @media (min-width: 900px) {
   .section {
     padding: 0 25vw;
+  }
+  .header header {
+    text-align: center;
   }
 }
 
