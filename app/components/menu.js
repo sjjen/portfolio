@@ -22,6 +22,8 @@ export default function Menu() {
     setIsMenuOpen(false);
   };
 
+  const lineClassNames = [styles.line1, styles.line2, styles.line3];
+
   return (
     <nav>
       <div className={styles.navbar}>
@@ -33,9 +35,9 @@ export default function Menu() {
             onChange={toggleMenu}
           />
           <div className={styles.hamburgerLines}>
-            <span className={`${styles.line} ${styles.line1}`}></span>
-            <span className={`${styles.line} ${styles.line2}`}></span>
-            <span className={`${styles.line} ${styles.line3}`}></span>
+            {lineClassNames.map((lineClass, index) => (
+              <span key={index} className={`${styles.line} ${lineClass}`}></span>
+            ))}
           </div>
           
           <div className={`${styles.menuItems} ${isMenuOpen ? styles.open : ''}`}>
@@ -50,3 +52,4 @@ export default function Menu() {
     </nav>
   );
 }
+

@@ -31,7 +31,7 @@
 
 .navContainer {
   display: block;
-  position: relative;
+  position: fixed;
   height: 60px;
 }
 
@@ -87,6 +87,7 @@
   padding-top: 12rem;
   background-color: var(--color-yellow);
   height: 100vh;
+  overflow: hidden;
   width: 20vw;
   transform: translateX(100%);
   position: absolute;
