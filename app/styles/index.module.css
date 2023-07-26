@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   padding: 2rem;
+  padding-top: 12vw;
   position: relative; /* Add relative positioning to the .main container */
 }
 
@@ -21,7 +22,7 @@
 }
 
 /* Apply styles for larger screens */
-@media (min-width: 600px) {
+@media (min-width: 1050px) {
   .gifContainer {
     flex-direction: row;
     justify-content: center;
@@ -32,7 +33,8 @@
 
   .gifContainer p {
     flex: 2; /* Make the <p> take the remaining width */
-    margin-left: 2rem; /* Add some spacing between the <figure> and the <p> */
+    margin-left: 1rem; /* Add some spacing between the <figure> and the <p> */
+    height: 7rem;
   }
 }
 
