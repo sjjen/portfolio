@@ -1,19 +1,57 @@
 .main {
-  display: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  position: relative; /* Add relative positioning to the .main container */
+}
+
+.gifContainer {
   justify-content: center;
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1rem; /* Add some spacing between the <figure> and the <p> */
+}
+
+.gifContainer p {
+  align-items: center;
+  flex: 1;
+}
+
+/* Apply styles for larger screens */
+@media (min-width: 600px) {
+  .gifContainer {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    text-align: left;
+    margin-bottom: 0; /* Reset the margin for larger screens */
+  }
+
+  .gifContainer p {
+    flex: 2; /* Make the <p> take the remaining width */
+    margin-left: 2rem; /* Add some spacing between the <figure> and the <p> */
+  }
+}
+
+/* Apply styles for screens under 600px */
+@media (max-width: 600px) {
+  .gifContainer {
+    flex-direction: column; /* Reset the flex-direction to stack p on top of figure */
+  }
+
+  .gifContainer p {
+    flex: 1;
+    margin-bottom: 1rem; /* Add some spacing between the <p> and the <figure> */
+    padding: 2rem;
+    margin: 0 3rem;
+    justify-content: center;
+  }
 }
 
 .buttonContainer {
   display: flex;
-  justify-content: center;
-  align-self: center;
-}
-
-.gifContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10rem;
+  justify-content: center; /* Center the button horizontally */
 }

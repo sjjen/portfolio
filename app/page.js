@@ -21,13 +21,16 @@ export default function Homepage() {
   return (
     <main className={styles.main}>
       <section className={styles.gifContainer}>
-        <Image
+        <figure>
+          <Image
           src="/homeright.gif"
           alt="mini me gif"
           width={400}
           height={400}
           priority
-        />
+          />
+        </figure>
+
         <p class="blurb">
           Hey there, I&apos;m Jen. <br />
           Welcome to my portfolio! <br />
@@ -40,9 +43,9 @@ export default function Homepage() {
         </p>
       </section>
       
-      {/* <div className={styles.buttonContainer}>
+      <div className={styles.buttonContainer}>
         <button onClick={handleClick}>Let&apos;s Go!</button>
-      </div> */}
+      </div>
     </main>
   );
 }
