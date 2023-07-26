@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeInFromLeft 1.5s ease-in-out; 
 }
 
 .header {
@@ -72,6 +73,17 @@
 
   .header header {
     margin-left: 2rem; /* Add some spacing between figure and header */
+  }
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Start position (off the screen to the left) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End position (fully visible) */
   }
 }
 

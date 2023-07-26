@@ -35,7 +35,7 @@ export default function About() {
           creative hobbies range from painting to knitting to woodworking and beyond—the list is endless!
           <br />
           <br />
-          This site is serving as a creative outlet for me to experiment while being able to showcase my work.
+          This site is serving as a creative outlet for me to experiment while being able to showcase my work. (also currently a work in progress)
           I am constantly evolving as a developer, so I&apos;m sure this project will continue to evolve alongside my growth.
           The website was built using JavaScript, HTML, and CSS, with Next.js & hosted on Vercel.
           <br />
