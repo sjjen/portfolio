@@ -48,19 +48,12 @@ export default function About() {
         
         
         <p>
-          You can connect with me via:
+          Connect with me @ 
+          <Link href={socialLinks[0].path}> {socialLinks[0].label} </Link> 
+          or
+          <Link href={socialLinks[1].path}> {socialLinks[1].label} </Link> 
           <br />
-          <nav>
-            <ul>
-              {socialLinks.map((link) => (
-                <li key={link.path}>
-                  <Link href={link.path}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          
-          (Sorry, I&apos;m not much of an avid user of social media T ^ T)<br />
+          <br />
           Thanks for visiting!
           <br />
           <br />
