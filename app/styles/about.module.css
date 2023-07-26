@@ -1,3 +1,64 @@
 .container {
-    
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.header {
+  padding: 0 10vw;
+  text-align: center; /* Center the content within the header */
+}
+
+.header figure {
+  width: 25rem;
+  height: 25rem;
+  background-image: url(/aboutme.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  margin: 0 auto; /* Center the figure horizontally */
+}
+
+.header header {
+  padding: 1rem;
+  font-size: 3rem;
+  font-family: var(--bitter);
+  text-transform: none;
+}
+
+.section {
+  padding: 0 10vw;
+  margin-top: 2rem;
+  font-family: var(--poppins);
+  text-transform: none;
+  font-weight: 400;
+}
+
+.section p {
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding: 0 25vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header figure {
+    margin: 0; /* Reset the margin to place figures side by side */
+  }
+
+  .header header {
+    margin-left: 2rem; /* Add some spacing between figure and header */
+  }
+}
+
+

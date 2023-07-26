@@ -7,12 +7,29 @@
   --color-button: #6b86855e;
   --color-button-hover: #5a71705e;
   --color-button-active: #83afac9b;
+  --color-navy: #0e2431;
 
   --poppins: 'Poppins', sans-serif;
   --baloo: 'Baloo 2', cursive;
   --bitter: 'Bitter', serif;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bolder;
+}
+
+a:visited {
+  color: inherit;
+}
 
 body {
   background: radial-gradient(circle, var(--color-yellow) 0%, var(--color-blue) 100%);
@@ -25,7 +42,7 @@ html {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 15px;
-  color: var(--color-brown);
+  color: var(--color-navy);
 }
 
 button {

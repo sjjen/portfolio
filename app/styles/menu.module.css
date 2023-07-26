@@ -20,7 +20,7 @@
 
 .navbar .navContainer a {
   text-decoration: none;
-  color: #0e2431;
+  color: var(--color-navy);
   font-weight: 500;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -66,7 +66,7 @@
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: var(--color-yellow);
 }
 
 .navContainer .hamburgerLines .line1 {
@@ -111,6 +111,10 @@
 
 .navContainer input[type="checkbox"]:checked ~ .menuItems {
   transform: translateX(0);
+}
+
+.navContainer input[type="checkbox"]:checked ~ .hamburgerLines .line {
+  background: var(--color-navy);
 }
 
 .navContainer input[type="checkbox"]:checked ~ .hamburgerLines .line1 {
