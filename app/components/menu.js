@@ -1,10 +1,10 @@
-'use client'
+'use client';
 import styles from '../styles/menu.module.css';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Menu() {
-  const [showMenu, setShowMenu] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuSections = [
     { path: '/', label: 'HOME' },
@@ -15,23 +15,38 @@ export default function Menu() {
   ];
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <nav className={styles.menuContainer}>
-      <div className={`${styles.menuIcon} ${showMenu ? styles.open : ''}`} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+    <nav>
+      <div className={styles.navbar}>
+        <div className={`${styles.container} ${styles.navContainer}`}>
+          <input
+            className={styles.checkbox}
+            type="checkbox"
+            checked={isMenuOpen}
+            onChange={toggleMenu}
+          />
+          <div className={styles.hamburgerLines}>
+            <span className={`${styles.line} ${styles.line1}`}></span>
+            <span className={`${styles.line} ${styles.line2}`}></span>
+            <span className={`${styles.line} ${styles.line3}`}></span>
+          </div>
+          
+          <div className={`${styles.menuItems} ${isMenuOpen ? styles.open : ''}`}>
+            {menuSections.map((section) => (
+              <li key={section.path} onClick={closeMenu}>
+                <Link href={section.path}>{section.label}</Link>
+              </li>
+            ))}
+          </div>
+        </div>
       </div>
-      <ul className={`${styles.menuItems} ${showMenu ? styles.show : ''}`}>
-        {menuSections.map((section) => (
-          <li key={section.path}>
-            <Link href={section.path}>{section.label}</Link>
-          </li>
-        ))}
-      </ul>
     </nav>
   );
 }
