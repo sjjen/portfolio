@@ -9,7 +9,6 @@ export default function About() {
     { path: 'https://github.com/sjjen', label: 'GitHub'}, 
   ]
     
-  
   return (
     <main>
       <header>Hey there! I&apos;m Jen Lee.</header>
