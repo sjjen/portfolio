@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   height: 62px;
+  z-index: 10;
 }
 
 .navbar .navContainer li {
@@ -85,18 +86,19 @@
 .navbar .menuItems {
   display: flex;
   padding-top: 12rem;
+  padding-left: 3rem;
   background-color: var(--color-yellow);
   height: 100vh;
   overflow: hidden;
-  width: 20vw;
+  width: 100vw;
   transform: translateX(100%);
   position: absolute;
   top: -2rem;
-  right: -2rem;
+  right: 0rem;
   display: flex;
   flex-direction: column;
   transition: transform 0.5s ease-in-out;
-  text-align: right;
+  text-align: center;
 }
 
 .navbar .menuItems li {
@@ -104,6 +106,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   padding-right: 3rem;
+  z-index: 1;
 }
 
 .navContainer input[type="checkbox"]:checked ~ .menuItems {
@@ -124,4 +127,12 @@
 
 .navContainer input[type="checkbox"]:checked ~ .logo{
   display: none;
+}
+
+
+@media (min-width: 1200px) {
+  .navbar .menuItems {
+    width: 20vw;
+    right: -2rem;
+  }
 }
