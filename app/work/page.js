@@ -9,19 +9,19 @@ export default function Work() {
 
   const projects = [
     {
-      title: "TITLE 1",
-      description: "blahablababfljf",
-      imageSrc: "/beachleft.gif",
+      title: "Svelvet v7.0",
+      description: "Svelte component library for creating node-based interfaces",
+      imageSrc: "/svelvetlogo.png",
     },
     {
-      title: "TITLE 2",
-      description: "blahablababffksfjsdfjdsfjjkfsjkfljf",
-      imageSrc: "/parkleft.gif",
+      title: "JobSpot",
+      description: "Dashboard for easily tracking job applications",
+      imageSrc: "/jobspotLogo.png",
     },
     {
-      title: "TITLE 3",
-      description: "blahablababffksfjsdfjdsfjjkfsjkfljf",
-      imageSrc: "/homeleft.gif",
+      title: "Moody",
+      description: "Color-based mood tracking and journaling application",
+      imageSrc: "/svelvetlogo.png",
     },
   ];
 

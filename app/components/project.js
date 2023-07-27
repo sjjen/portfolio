@@ -17,6 +17,7 @@ export default function Project(props) {
             alt="pic of me"
             width={400}
             height={400}
+            // layout='responsive'
             priority
           />
       </section>

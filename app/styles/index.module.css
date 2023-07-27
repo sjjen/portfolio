@@ -6,6 +6,7 @@
   padding: 2rem;
   padding-top: 12vw;
   position: relative; /* Add relative positioning to the .main container */
+  animation: fadeInFromLeft 1.5s ease-in-out; 
 }
 
 .gifContainer {
@@ -57,3 +58,15 @@
   display: flex;
   justify-content: center; /* Center the button horizontally */
 }
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Start position (off the screen to the left) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End position (fully visible) */
+  }
+}
+

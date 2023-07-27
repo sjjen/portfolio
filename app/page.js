@@ -43,9 +43,9 @@ export default function Homepage() {
         </p>
       </section>
       
-      <div className={styles.buttonContainer}>
+      {/* <div className={styles.buttonContainer}>
         <button onClick={handleClick}>Let&apos;s Go!</button>
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className={styles.footerContainer}>
       
-      <nav>
+      {/* <nav>
           <ul>
             {socialLinks.map((link) => (
               <li key={link.path}>
@@ -19,7 +19,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </nav>
+        </nav> */}
       
       <section>
         <h6>© 2023 Jen Lee. All Rights Reserved.</h6>
