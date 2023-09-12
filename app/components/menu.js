@@ -10,7 +10,7 @@ export default function Menu() {
     { path: '/', label: 'HOME' },
     // { path: '/explore', label: 'EXPLORE' },
     { path: '/about', label: 'ABOUT' },
-    // { path: '/work', label: 'WORK' },
+    // { path: '/experience', label: 'EXPERIENCE' },
     // { path: '/contact', label: 'CONTACT' },
   ];
 

@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInFromLeft 1.5s ease-in-out; 
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Start position (off the screen to the left) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End position (fully visible) */
+  }
+}
